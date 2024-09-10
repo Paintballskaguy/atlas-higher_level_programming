@@ -19,7 +19,7 @@ def text_indentation(text):
     Example:
         >>> text_indentation("Hello. How are you?")
         Hello.
-        
+
         How are you?
     """
 
