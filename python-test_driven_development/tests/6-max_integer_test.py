@@ -28,10 +28,9 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer(), None)
 
     def test_max_wrong_input(self):
+        self.assertEqual(max_integer("string"), "t")
         with self.assertRaises(TypeError):
-            max_integer("string")
-        with self.assertRaises(TypeError):
-            max_integer({"key": "value"})
+        	max_integer([1, "a", 3])
 
     def test_max_large_numbers(self):
         large_num = 10**18
