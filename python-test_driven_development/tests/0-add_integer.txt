@@ -1,3 +1,5 @@
+from ./python-test_driven_development/0-add_integer.py import add_integer
+
 >>> add_integer(1, 2)
 3
 >>> add_integer(100, -2)
@@ -22,5 +24,3 @@ TypeError: a must be an integer
 Traceback (most recent call last):
     ...
 TypeError: a must be an integer
-
-#python3 -m doctest -v ./tests/0-add_integer.txt#
