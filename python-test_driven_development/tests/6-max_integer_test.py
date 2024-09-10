@@ -4,7 +4,7 @@ Unittest module for the `max_integer` function.
 """
 
 import unittest
-from max_integer import max_integer  # Import the function to test
+from 6-max_integer import max_integer  # Import the function to test
 
 
 class TestMaxInteger(unittest.TestCase):
