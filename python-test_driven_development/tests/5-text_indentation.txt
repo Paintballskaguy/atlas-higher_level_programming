@@ -1,0 +1,66 @@
+# 5-text_indentation.txt
+===========================
+How to Use text_indentation.py
+===========================
+This module defines a function `text_indentation(text)` that prints a text with
+2 new lines after each of the following characters: '.', '?', and ':'.
+
+Usage
+=====
+
+::
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+    >>> text_indentation("Hello. How are you?")
+    Hello.
+    <BLANKLINE>
+    How are you?
+    <BLANKLINE>
+
+::
+
+    >>> text_indentation("Example: This should have two lines after the colon.")
+    Example:
+    <BLANKLINE>
+    This should have two lines after the colon.
+    <BLANKLINE>
+
+::
+
+    >>> text_indentation("Can you help me? Thanks.")
+    Can you help me?
+    <BLANKLINE>
+    Thanks.
+    <BLANKLINE>
+
+Invalid Inputs
+==============
+
+::
+
+    >>> text_indentation(123)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+::
+
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+Edge Cases
+==========
+
+::
+
+    >>> text_indentation("Hello.    How are you?   ")
+    Hello.
+    <BLANKLINE>
+    How are you?
+    <BLANKLINE>
+
+If the input string is empty, nothing is printed.
+
+::
+
+    >>> text_indentation("")
