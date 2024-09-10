@@ -1,7 +1,16 @@
 #!/usr/bin/python3
+"""
+This module provides a function `matrix_divided(matrix, div)`.
+
+The function divides all elements of a matrix by a given number `div` and returns
+a new matrix with the results rounded to 2 decimal places.
+
+Usage:
+    matrix_divided(matrix, div)
+"""
+
+
 def matrix_divided(matrix, div):
-
-
     """
     Divides all elements of a matrix by div, rounding the result to 2 decimal places.
 
