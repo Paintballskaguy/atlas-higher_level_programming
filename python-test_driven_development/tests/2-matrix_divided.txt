@@ -42,6 +42,15 @@ If `div` is zero, a `ZeroDivisionError` will be raised.
     Traceback (most recent call last):
     ZeroDivisionError: division by zero
 
+Dividing by Infinity
+====================
+When `div` is infinity (`float('inf')`), all elements in the matrix should become `0.0`.
+
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
+    >>> matrix_divided(matrix, float('inf'))
+    [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
+
 `div` must be a number (integer or float).
 
     >>> matrix = [[1, 2], [3, 4]]
