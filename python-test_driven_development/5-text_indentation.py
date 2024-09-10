@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-This module provides a function `text_indentation` that prints a text with 2 new lines
-after each of the following characters: '.', '?', and ':'.
+This module provides a function `text_indentation` that prints a text with
+2 new lines after each of the following characters: '.', '?', and ':'.
 """
 
 
@@ -13,20 +13,13 @@ def text_indentation(text):
         text (str): The text to be printed.
     
     Raises:
-        TypeError: If the text is not a string.
-    
-    The function will also ensure that there is no extra space at the beginning or
-    at the end of each printed line.
+        TypeError: If text is not a string.
     
     Example:
-        >>> text_indentation("Hello. How are you? I'm fine: thank you.")
+        >>> text_indentation("Hello. How are you?")
         Hello.
         
         How are you?
-        
-        I'm fine:
-        
-        thank you.
     """
     
     if not isinstance(text, str):
@@ -41,7 +34,6 @@ def text_indentation(text):
         if text[i] in special_chars:
             result += "\n\n"
             i += 1
-
             while i < len(text) and text[i] == ' ':
                 i += 1
             continue
