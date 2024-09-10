@@ -4,16 +4,23 @@ This module defines a function `say_my_name` that prints a person's full name.
 """
 
 
-def say_my_name(first_name, last_name=""):  
-	"""
-    Prints 'My name is <first name> <last name>'.
-    
+def say_my_name(first_name, last_name=""):
+    """
+    Prints 'My name is <first_name> <last_name>'.
+
     Args:
-        first_name: The first name to print, must be a string.
-        last_name: The last name to print, must be a string (default is an empty string).
-        
+        first_name (str): The first name to print. Required.
+        last_name (str): The last name to print. Optional, defaults to an empty string.
+
     Raises:
-        TypeError: If first_name or last_name are not strings.
+        TypeError: If either first_name or last_name is not a string.
+
+    Example:
+        >>> say_my_name("John", "Smith")
+        My name is John Smith
+
+        >>> say_my_name("Alice")
+        My name is Alice 
     """
     
     if not isinstance(first_name, str):
