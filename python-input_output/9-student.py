@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Function to make a student class.   
+Function to make a student class.
 """
 
 
