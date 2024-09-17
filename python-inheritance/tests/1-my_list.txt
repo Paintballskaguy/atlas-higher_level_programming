@@ -1,0 +1,65 @@
+=========================
+How to Use MyList Class
+=========================
+
+This document defines the class ``MyList``, which inherits from the built-in ``list`` class. It includes a method ``print_sorted()`` that prints the list in ascending order.
+
+Class Definition
+================
+
+The class ``MyList`` is a subclass of the ``list`` class and has one additional method: ``print_sorted()``.
+
+::
+
+    class MyList(list):
+        """Inherits from the built-in list class and provides a method to print a sorted version of the list."""
+
+        def print_sorted(self):
+            """Prints the list, sorted in ascending order (without modifying the original list)."""
+            print(sorted(self))
+
+Usage
+=====
+
+You can use the ``MyList`` class to create a list, append elements, and then use the ``print_sorted()`` method to print the list in ascending order. The original list remains unchanged.
+
+Example 1
+---------
+
+In this example, we create an instance of ``MyList``, add some elements, and use ``print_sorted()``.
+
+::
+
+    >>> class MyList(list):
+    ...     """Inherits from the built-in list class and provides a method to print a sorted version of the list."""
+    ...     def print_sorted(self):
+    ...         """Prints the list, sorted in ascending order (without modifying the original list)."""
+    ...         print(sorted(self))
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append(5)
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4, 5]
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+
+Example 2
+---------
+
+Here’s another example showing the ``print_sorted()`` method with different numbers.
+
+::
+
+    >>> my_list = MyList()
+    >>> my_list.extend([10, 5, 2, 8, 3])
+    >>> print(my_list)
+    [10, 5, 2, 8, 3]
+    >>> my_list.print_sorted()
+    [2, 3, 5, 8, 10]
+    >>> print(my_list)
+    [10, 5, 2, 8, 3]
