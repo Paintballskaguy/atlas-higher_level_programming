@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Function to make a student class.    
+Function to make a student class.   
 """
 
 
@@ -14,11 +14,11 @@ class Student:
             last_name (str): The last name of the student.
             age (int): The age of the student.
         """
-        
+
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
-        
+
     def to_json(self):
         """
         Retrieves a dictionary representation of the Student instance.
