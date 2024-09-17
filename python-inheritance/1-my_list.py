@@ -8,7 +8,7 @@ MyList contains a public instance method `print_sorted` that prints the list in 
 
 class MyList(list):
     """Inherits from the built-in list class and provides a method to print a sorted version of the list."""
-	def __init_subclass__(self):
+	def __init__(self):
     	"""initializes the object"""
 		super().__init__()
 
