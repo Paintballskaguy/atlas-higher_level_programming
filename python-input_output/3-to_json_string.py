@@ -4,6 +4,7 @@ This returns the JSON representation of
 an object 
 """
 
+import json
 
 def to_json_string(my_obj):
     """
@@ -15,5 +16,5 @@ def to_json_string(my_obj):
     Returns:
         str: the JSON stuff of the object.
     """
-import json
-return json.dumps(my_obj)
+
+    return json.dumps(my_obj)
