@@ -27,8 +27,8 @@ Check area() method (raises exception)
     Exception: area() is not implemented
 
 
-Check integer_validator method
-==============================
+Check integer_validator method with valid input
+===============================================
 
 ::
 
@@ -41,7 +41,7 @@ Check integer_validator with invalid inputs
 ::
 
     >>> bg.integer_validator("age", 1)
-    
+
 ::
 
     >>> bg.integer_validator("age", 0)
@@ -97,3 +97,25 @@ Check integer_validator with invalid inputs
     Traceback (most recent call last):
     ...
     TypeError: age must be an integer
+
+
+Check integer_validator() with missing value
+============================================
+
+::
+
+    >>> bg.integer_validator("age")
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+
+Check integer_validator() with only name argument
+=================================================
+
+::
+
+    >>> bg.integer_validator("age")
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
