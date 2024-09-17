@@ -21,9 +21,9 @@ class Student:
         
         def to_json(self):
             """
-                Retrieves a dictionary representation of the Student instance.
+            Retrieves a dictionary representation of the Student instance.
 
-                Returns:
+            Returns:
                 dict: A dictionary representation of the instance.
             """
             return self.__dict__
