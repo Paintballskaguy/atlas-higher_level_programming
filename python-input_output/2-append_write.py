@@ -5,6 +5,7 @@ a text file in UTF8 and return the number
 of characters that were added.
 """
 
+
 def append_write(filename="", text=""):
     """
     Appends a string to the end of a text file.
