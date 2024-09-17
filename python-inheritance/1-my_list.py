@@ -8,9 +8,10 @@ MyList contains a public instance method `print_sorted` that prints the list in 
 
 class MyList(list):
     """Inherits from the built-in list class and provides a method to print a sorted version of the list."""
-	def __init__(self):
-    	"""initializes the object"""
-		super().__init__()
+
+    def __init__(self):
+        """Initializes the object (optional since we're inheriting from list)."""
+        super().__init__()
 
     def print_sorted(self):
         """Prints the list, sorted in ascending order (without modifying the original list)."""
