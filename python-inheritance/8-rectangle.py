@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """
-Defines a class Rectangle that inherits from BaseGeometry.
+This module defines a class Rectangle that inherits from BaseGeometry.
 """
-
 
 class BaseGeometry:
     """A class with methods to calculate area and validate integers."""
