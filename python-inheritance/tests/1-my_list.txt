@@ -1,78 +1,179 @@
-Checking for module docstring:
-         >>> m = __import__("1-my_list").__doc__
-         >>> len(m) > 1
-         True
+=========================
+How to Use MyList Class
+=========================
 
-Checking for class docstring:
-         >>> c = __import__("1-my_list").MyList.__doc__
-         >>> len(c) > 1
-         True
+This document defines the class ``MyList``, which inherits from the built-in ``list`` class. It includes a method ``print_sorted()`` that prints the list in ascending order.
 
-Checking for method docstring:
-	  >>> mod = __import__("1-my_list").MyList.print_sorted.__doc__
-	  >>> len(mod) > 1
-	  True
+Class Definition
+================
 
-Checking that MyList inherits from list:
-	  >>> issubclass(MyList, list)
-	  True
+::
 
-Checking for empty list:
-	  >>> l = MyList()
-	  >>> l.print_sorted()
-	  []
+    class MyList(list):
+        """Inherits from the built-in list class and provides a method to print a sorted version of the list."""
 
-Checking that appendng works:
-	  >>> l.append(1)
-	  >>> l.append(2)
-	  >>> l.append(3)
-	  >>> l.append(4)
-	  >>> print(l)
-	  [1, 2, 3, 4]
+        def print_sorted(self):
+            """Prints the list, sorted in ascending order (without modifying the original list)."""
+            print(sorted(self))
 
-Checking for list already in correct order:
-	  >>> l.print_sorted()
-	  [1, 2, 3, 4]
 
-Checking for reversed order list:
-	  >>> l = MyList()
-	  >>> l.append(4)
-	  >>> l.append(3)
-	  >>> l.append(2)
-	  >>> l.append(1)
-	  >>> print(l)
-	  [4, 3, 2, 1]
-	  >>> l.print_sorted()
-	  [1, 2, 3, 4]
-	  >>> print(l)
-	  [4, 3, 2, 1]
+Check instantiation
+===================
 
-Checking for one negative number:
-	  >>> l.append(-1)
-	  >>> l.append(5)
-	  >>> print(l)
-	  [4, 3, 2, 1, -1, 5]
-	  >>> l.print_sorted()
-	  [-1, 1, 2, 3, 4, 5]
-	  >>> print(l)
-	  [4, 3, 2, 1, -1, 5]
+This test verifies the correct instantiation of ``MyList``.
 
-Checking for all negative numbers:
-	  >>> l = MyList()
-	  >>> l.append(-10)
-	  >>> l.append(-1)
-	  >>> l.append(-7)
-	  >>> l.append(-2)
-	  >>> l.append(-8)
-	  >>> print(l)
-	  [-10, -1, -7, -2, -8]
-	  >>> l.print_sorted()
-	  [-10, -8, -7, -2, -1]
-	  >>> print(l)
-          [-10, -1, -7, -2, -8]
+::
 
-Checking for too many arguments:
-	  >>> l.print_sorted(1)
-	  Traceback (most recent call last):
-	  ...
-	  TypeError: print_sorted() takes 1 positional argument but 2 were given
+    >>> class MyList(list):
+    ...     def print_sorted(self):
+    ...         print(sorted(self))
+    >>> l = MyList()
+    >>> isinstance(l, MyList)
+    True
+
+
+Check inherits from list
+========================
+
+This test checks that ``MyList`` inherits from the built-in ``list`` class.
+
+::
+
+    >>> class MyList(list):
+    ...     def print_sorted(self):
+    ...         print(sorted(self))
+    >>> isinstance(l, list)
+    True
+
+
+Check __str__
+=============
+
+We check if the ``__str__`` method correctly prints the list contents.
+
+::
+
+    >>> class MyList(list):
+    ...     def print_sorted(self):
+    ...         print(sorted(self))
+    >>> l = MyList()
+    >>> l.append(1)
+    >>> l.append(4)
+    >>> print(l)
+    [1, 4]
+
+
+Check append()
+==============
+
+This test verifies that elements can be appended to the list.
+
+::
+
+    >>> class MyList(list):
+    ...     def print_sorted(self):
+    ...         print(sorted(self))
+    >>> l = MyList()
+    >>> l.append(1)
+    >>> l.append(4)
+    >>> l.append(3)
+    >>> print(l)
+    [1, 4, 3]
+
+
+Check print_sorted() with sorted append
+=======================================
+
+This test checks that ``print_sorted()`` correctly handles a list that is already sorted.
+
+::
+
+    >>> class MyList(list):
+    ...     def print_sorted(self):
+    ...         print(sorted(self))
+    >>> l = MyList()
+    >>> l.extend([1, 2, 3])
+    >>> l.print_sorted()
+    [1, 2, 3]
+
+
+Check print_sorted() with not sorted append
+===========================================
+
+This test checks that ``print_sorted()`` correctly handles an unsorted list.
+
+::
+
+    >>> class MyList(list):
+    ...     def print_sorted(self):
+    ...         print(sorted(self))
+    >>> l = MyList()
+    >>> l.extend([4, 2, 5])
+    >>> l.print_sorted()
+    [2, 4, 5]
+
+
+Check print_sorted() with negative numbers
+==========================================
+
+This test verifies that ``print_sorted()`` correctly handles a list with negative numbers.
+
+::
+
+    >>> class MyList(list):
+    ...     def print_sorted(self):
+    ...         print(sorted(self))
+    >>> l = MyList()
+    >>> l.extend([3, -1, 4, -5])
+    >>> l.print_sorted()
+    [-5, -1, 3, 4]
+
+
+Check print_sorted() with empty list
+====================================
+
+This test ensures that ``print_sorted()`` works on an empty list without error.
+
+::
+
+    >>> class MyList(list):
+    ...     def print_sorted(self):
+    ...         print(sorted(self))
+    >>> l = MyList()
+    >>> l.print_sorted()
+    []
+
+
+Check print_sorted() returns a new sorted list
+==============================================
+
+This test ensures that ``print_sorted()`` returns a sorted list without modifying the original list.
+
+::
+
+    >>> class MyList(list):
+    ...     def print_sorted(self):
+    ...         print(sorted(self))
+    >>> l = MyList()
+    >>> l.extend([10, 3, 7])
+    >>> l.print_sorted()
+    [3, 7, 10]
+    >>> print(l)
+    [10, 3, 7]
+
+
+Check too many arguments
+========================
+
+This test verifies that calling ``print_sorted()`` with extra arguments raises a ``TypeError``.
+
+::
+
+    >>> class MyList(list):
+    ...     def print_sorted(self):
+    ...         print(sorted(self))
+    >>> l = MyList()
+    >>> l.print_sorted(1)
+    Traceback (most recent call last):
+    ...
+    TypeError: print_sorted() takes 1 positional argument but 2 were given
