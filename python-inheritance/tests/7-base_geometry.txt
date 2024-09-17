@@ -1,0 +1,53 @@
+===============================
+How to Use BaseGeometry Class
+===============================
+
+This document defines the class ``BaseGeometry`` and its methods: ``area`` and ``integer_validator``.
+
+Usage
+=====
+
+Check area method (raises exception)
+====================================
+
+::
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+    >>> bg = BaseGeometry()
+    >>> bg.area()
+    Traceback (most recent call last):
+    ...
+    Exception: area() is not implemented
+
+Check integer_validator method with invalid input
+=================================================
+
+::
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("age", "3")
+    Traceback (most recent call last):
+    ...
+    TypeError: age must be an integer
+
+::
+
+    >>> bg.integer_validator("age", 0)
+    Traceback (most recent call last):
+    ...
+    ValueError: age must be greater than 0
+
+::
+
+    >>> bg.integer_validator("age", -5)
+    Traceback (most recent call last):
+    ...
+    ValueError: age must be greater than 0
+
+Check integer_validator method with valid input
+===============================================
+
+::
+
+    >>> bg.integer_validator("age", 10)
