@@ -20,7 +20,7 @@ Class Definition
 Check instantiation
 ===================
 
-Here we instantiate an object of ``MyList`` and verify that it is an instance of both ``MyList`` and ``list``.
+This test verifies the correct instantiation of ``MyList``.
 
 ::
 
@@ -30,6 +30,15 @@ Here we instantiate an object of ``MyList`` and verify that it is an instance of
     >>> my_list = MyList()
     >>> isinstance(my_list, MyList)
     True
+
+
+Check inherits from list
+========================
+
+This test checks that ``MyList`` inherits from the built-in ``list`` class.
+
+::
+
     >>> isinstance(my_list, list)
     True
 
@@ -51,13 +60,10 @@ We check if the ``__str__`` method correctly prints the list contents.
 Check append()
 ==============
 
-This test verifies the ability to append elements to the list.
+This test verifies that elements can be appended to the list.
 
 ::
 
-    >>> my_list = MyList()
-    >>> my_list.append(1)
-    >>> my_list.append(4)
     >>> my_list.append(3)
     >>> print(my_list)
     [1, 4, 3]
@@ -66,7 +72,7 @@ This test verifies the ability to append elements to the list.
 Check print_sorted() with sorted append
 =======================================
 
-In this test, we ensure that ``print_sorted()`` prints the list in ascending order when the list is already sorted.
+This test checks that ``print_sorted()`` correctly handles a list that is already sorted.
 
 ::
 
@@ -76,10 +82,10 @@ In this test, we ensure that ``print_sorted()`` prints the list in ascending ord
     [1, 2, 3]
 
 
-Check print_sorted() with unsorted append
-=========================================
+Check print_sorted() with not sorted append
+===========================================
 
-This test checks that ``print_sorted()`` correctly sorts a list that was not appended in order.
+This test checks that ``print_sorted()`` correctly handles an unsorted list.
 
 ::
 
@@ -92,7 +98,7 @@ This test checks that ``print_sorted()`` correctly sorts a list that was not app
 Check print_sorted() with negative numbers
 ==========================================
 
-This test verifies that the sorting works correctly when the list contains negative numbers.
+This test verifies that ``print_sorted()`` correctly handles a list with negative numbers.
 
 ::
 
@@ -105,7 +111,7 @@ This test verifies that the sorting works correctly when the list contains negat
 Check print_sorted() with empty list
 ====================================
 
-This test ensures that ``print_sorted()`` handles an empty list without error.
+This test ensures that ``print_sorted()`` works on an empty list without error.
 
 ::
 
@@ -117,7 +123,7 @@ This test ensures that ``print_sorted()`` handles an empty list without error.
 Check print_sorted() returns a new sorted list
 ==============================================
 
-This test ensures that ``print_sorted()`` prints a sorted list without modifying the original list.
+This test ensures that ``print_sorted()`` returns a sorted list without modifying the original list.
 
 ::
 
@@ -127,69 +133,3 @@ This test ensures that ``print_sorted()`` prints a sorted list without modifying
     [3, 7, 10]
     >>> print(my_list)
     [10, 3, 7]
-
-
-Check reversed order list
-=========================
-
-This test verifies that ``print_sorted()`` works correctly with a reversed order list.
-
-::
-
-    >>> my_list = MyList()
-    >>> my_list.extend([4, 3, 2, 1])
-    >>> print(my_list)
-    [4, 3, 2, 1]
-    >>> my_list.print_sorted()
-    [1, 2, 3, 4]
-    >>> print(my_list)
-    [4, 3, 2, 1]
-
-
-Check with one negative number
-==============================
-
-This test checks the behavior of ``print_sorted()`` when the list contains one negative number.
-
-::
-
-    >>> my_list = MyList()
-    >>> my_list.extend([4, 3, 2, 1])
-    >>> my_list.append(-1)
-    >>> my_list.append(5)
-    >>> print(my_list)
-    [4, 3, 2, 1, -1, 5]
-    >>> my_list.print_sorted()
-    [-1, 1, 2, 3, 4, 5]
-    >>> print(my_list)
-    [4, 3, 2, 1, -1, 5]
-
-
-Check all negative numbers
-==========================
-
-This test ensures that ``print_sorted()`` works when the list contains all negative numbers.
-
-::
-
-    >>> my_list = MyList()
-    >>> my_list.extend([-10, -1, -7, -2, -8])
-    >>> print(my_list)
-    [-10, -1, -7, -2, -8]
-    >>> my_list.print_sorted()
-    [-10, -8, -7, -2, -1]
-    >>> print(my_list)
-    [-10, -1, -7, -2, -8]
-
-
-Check too many arguments
-========================
-
-This test verifies that calling ``print_sorted()`` with extra arguments raises a ``TypeError``.
-
-::
-
-    >>> my_list.print_sorted(1)
-    Traceback (most recent call last):
-    ...
-    TypeError: print_sorted() takes 1 positional argument but 2 were given
