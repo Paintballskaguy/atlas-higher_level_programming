@@ -8,7 +8,7 @@ class Base:
     """Base class manages the 'id' for all"""
     __nb_objects = 0
     
-    def __init__(self, id=none):
+    def __init__(self, id=None):
         """Initialize a new Base instance.
         
         Args:
