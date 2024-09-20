@@ -48,7 +48,7 @@ def height(self, value):
          raise ValueError("height must be > 0")
     self.__height = value
     
-@#property
+@property
 def x(self):
     return self.__x
     
