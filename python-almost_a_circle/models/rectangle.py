@@ -78,8 +78,10 @@ class Rectangle(Base):
 
     def display(self):
         """prints the rectangle using #"""
+        print("\n" * self.y, end="")
+        
         for _ in range(self.height):
-            print("#" * self.width)
+            print(" "  * self.x + "#" * self.width)
 
     def __str__(self):
         """Override the __str__ method to return [Rectangle] (<id>) <x>/<y> - <width>/<height>."""
