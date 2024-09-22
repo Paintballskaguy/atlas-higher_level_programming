@@ -25,14 +25,14 @@ class Square(Rectangle):
     
     @size.setter
     def size(self, value)
-    """Setter for size. sets both width and height to same value
-        Args:
-            value (int): The size value to set for both width and height.
-        
-        Raises:
-            TypeError: If the value is not an integer.
-            ValueError: If the value is <= 0.
-    """
+        """Setter for size. sets both width and height to same value
+            Args:
+                value (int): The size value to set for both width and height.
+            
+            Raises:
+                TypeError: If the value is not an integer.
+                ValueError: If the value is <= 0.
+        """
         self.width = value
         self.height = value
         
