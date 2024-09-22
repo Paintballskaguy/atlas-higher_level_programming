@@ -36,7 +36,27 @@ class Square(Rectangle):
         self.width = value
         self.height = value
         
+    def update(self, *args, **kwargs):
+        """Update the attributes of the square.
         
+        *args:
+            1st: id attribute
+            2nd: size attribute
+            3rd: x attribute
+            4th: y attribute
+        
+        **kwargs: assigns key/value pairs to attributes if *args is empty.
+        """
+        if args and len(args) > 0:
+            attrs = ['id', 'size', 'x', 'y']
+            for i, value in enumerate(args):
+                if i < len(attrs):
+                    setattr(self, attrs[i], value)
+        else:
+            for key, value in kwargs.items():
+                if hasattr(self, key):
+                    setattr(self, key, value)
+
     def __str__(self):
         """override __str__ method to return [square]"""
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
