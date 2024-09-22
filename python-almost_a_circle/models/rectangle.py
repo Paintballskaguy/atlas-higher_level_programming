@@ -87,7 +87,7 @@ class Rectangle(Base):
         """Override the __str__ method to return [Rectangle] (<id>) <x>/<y> - <width>/<height>."""
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
 
-    def  update(self,  *args):
+    def  update(self,  *args, **kwargs):
         """
         Assigns attributes based on *args.
         
@@ -98,7 +98,12 @@ class Rectangle(Base):
             4th: x attribute
             5th: y attribute
         """
-        attrs = ['id', 'width', 'height', 'x', 'y']
-        for i, value in enumerate(args):
-            if i < len(attrs):
-                setattr(self, attrs[i], value)
+        if args and len(args) > 0;
+            attrs = ['id', 'width', 'height', 'x', 'y']
+            for i, value in enumerate(args):
+                if i < len(attrs):
+                    setattr(self, attrs[i], value)
+        else:
+            for key, value in kwargs.items():
+                if hasattr(self, key):
+                    setattr(self, key, value)
