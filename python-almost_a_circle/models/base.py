@@ -4,6 +4,8 @@ This is the base class. it will manage 'id' attributes for all other classes.
 """
 
 
+import json
+
 class Base:
     """Base class manages the 'id' for all"""
     __nb_objects = 0
@@ -20,3 +22,17 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+            
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """Returns the JSON string representation of list_dictionaries.
+        
+        Args:
+            list_dictionaries (list): A list of dictionaries.
+        
+        Returns:
+            str: The JSON string representation of list_dictionaries or "[]".
+        """
+        if list_dictionaries is None or len(list_dictionaries) == 0:
+            return "[]"
+        return json.dumps(list_dictionaries)
