@@ -97,6 +97,9 @@ class Rectangle(Base):
             3rd: height attribute
             4th: x attribute
             5th: y attribute
+            
+        **kwargs: assigns key/value pairs to attributes
+        if *args is empty.
         """
         if args and len(args) > 0;
             attrs = ['id', 'width', 'height', 'x', 'y']
