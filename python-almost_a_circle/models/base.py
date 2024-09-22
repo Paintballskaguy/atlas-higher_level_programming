@@ -5,6 +5,7 @@ This is the base class. it will manage 'id' attributes for all other classes.
 
 
 import json
+import os
 
 class Base:
     """Base class manages the 'id' for all"""
