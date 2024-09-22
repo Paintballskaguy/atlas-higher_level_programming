@@ -101,7 +101,7 @@ class Rectangle(Base):
         **kwargs: assigns key/value pairs to attributes
         if *args is empty.
         """
-        if args and len(args) > 0;
+        if args and len(args) > 0:
             attrs = ['id', 'width', 'height', 'x', 'y']
             for i, value in enumerate(args):
                 if i < len(attrs):
