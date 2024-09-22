@@ -3,10 +3,9 @@
 This is the module to define the Square.
 """
 
+from models.rectangle import Rectangle
 
-from models.base import Base
-
-class Square(Base):
+class Square(Rectangle):
     """ inherts from the parent in Base.py """
     def __init__(self, size, x=0, y=0, id=None):
         """Initialize a new Square instance.
