@@ -1,3 +1,3 @@
-SELECT id, name FROM students WHERE batch_id = 3 ORDER BY created_at DESC LIMIT 3;
-
+-- Script to list all databases on the MySQL server
+-- This script connects to the MySQL server and shows all databases
 SHOW DATABASES;
