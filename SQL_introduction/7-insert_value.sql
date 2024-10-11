@@ -1,4 +1,3 @@
--- Script that counts the number of records with id = 89
-
-SELECT id, name
-FROM first_table WHERE id = 89;
+-- Script to insert a new row into first_table with id = 89 and name = 'Best School'
+INSERT INTO first_table (id, name)
+VALUES (89, 'Best School');
