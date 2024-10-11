@@ -2,10 +2,10 @@
 -- Creates the table with columns id, name, score
 --puts 4 records into the table.
 
-CREATE TABLE IF NOT EXISTS `second_table` (
-    `id` INT,
-    `name` VARCHAR(256),
-    `score` INT
+CREATE TABLE IF NOT EXISTS second_table (
+    id INT,
+    name VARCHAR(256),
+    score INT
 );
 
 INSERT INTO second_table (id, name, score) VALUES (1, "John", 10);
