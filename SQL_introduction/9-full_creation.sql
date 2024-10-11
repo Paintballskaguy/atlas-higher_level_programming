@@ -14,4 +14,4 @@ INSERT INTO second_table (id, name, score) VALUES
     (3, 'Bob', 14),
     (4, 'George', 8)
 
-ON DUPLICATE KEY UPDATE id=id;
+ON DUPLICATE KEY UPDATE score = VALUES(score);
