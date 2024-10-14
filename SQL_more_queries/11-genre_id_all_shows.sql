@@ -1,5 +1,4 @@
 -- script to list all the shows with their genre ID and display NULL
-USE hbtn_0d_tvshows;
 
 SELECT tv_shows.title, tv_show_genres.genre_id
 FROM tv_shows
