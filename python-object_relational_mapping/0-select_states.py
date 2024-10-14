@@ -7,6 +7,7 @@ This script lists all states from hbtn_0e_0_usa.
 import MySQLdb
 from sys import argv
 
+
 def list_states():
 
     db = MySQLdb.connect(host="localhost",
