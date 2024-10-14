@@ -3,24 +3,28 @@
 This script lists all states from hbtn_0e_0_usa.
 """
 
-#!/usr/bin/python3
 import MySQLdb
-import sys
+from sys import argv
 
-if __name__ == "__main__":
-    mysql_username = sys.argv[1]
-    mysql_password = sys.argv[2]
-    database_name = sys.argv[3]
 
-    db = MySQLdb.connect(host="localhost", port=3306, user=root,
-                         passwd=Cschalipen9536!!, db=hbtn_0e_0_usa)
+def list_states():
 
-    cursor = db.cursor()
-    cursor.execute("SELECT * FROM states ORDER BY id ASC")
-    rows = cursor.fetchall()
 
+    db = MySQLdb.connect(host="localhost",
+                         user=argv[1],
+                         passwd=argv[2],
+                         db=argv[3],
+                         port=3306)
+
+    cur = db.cursor()
+    cur.execute("SELECT * FROM states ORDER BY id ASC")
+    rows = cur.fetchall()
     for row in rows:
         print(row)
 
-    cursor.close()
+    cur.close()
     db.close()
+
+
+if __name__ == "__main__":
+    list_states()
