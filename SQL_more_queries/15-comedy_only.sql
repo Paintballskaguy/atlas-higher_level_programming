@@ -1,7 +1,8 @@
 -- Script to get all the comedy shows
 
-SELECT tv_shows.title, tv_genres.name
+SELECT tv_shows.title
 FROM tv_shows
-LEFT JOIN tv_genres ON tv_shows.id = tv_genres.id
+JOIN tv_show_genres ON tv_shows.id = tv_show_genres.show_id
+JOIN tv_genres ON tv_show_genres.show_id = tv_shows.id 
 WHERE tv_genres.name = 'Comedy'
 GROUP BY tv_shows.title;
