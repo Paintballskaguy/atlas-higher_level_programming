@@ -15,7 +15,7 @@ def find_state_by_name():
                          port=3306)
 
     cur = db.cursor()
-    query = ("SELECT * FROM states WHERE "
+    query = ("SELECT * FROM states WHERE BINARY "
              "name = '{}' ORDER BY id ASC".format(argv[4]))
     cur.execute(query)
 
