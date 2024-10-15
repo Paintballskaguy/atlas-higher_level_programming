@@ -3,7 +3,6 @@
 Script takes in an arugment and displays all state values.    
 """
 
-
 import MySQLdb
 from sys import argv
 
