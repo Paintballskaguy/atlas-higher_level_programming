@@ -5,7 +5,6 @@ This script lists all the states with a name starting with 'N'
 only from database hbtn_0e_0_usa
 
 """
-
 import MySQLdb
 from sys import argv
 
