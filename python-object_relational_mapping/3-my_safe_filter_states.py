@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 Script to display all states where the name matches user-input
-safe from SQL injections  
+safe from SQL injections
 """
 import MySQLdb
 from sys import argv
