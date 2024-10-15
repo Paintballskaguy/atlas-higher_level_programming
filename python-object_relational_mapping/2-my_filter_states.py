@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Script takes in an arugment and displays all state values.    
+Script takes in an arugment and displays all state values.  
 """
 
 import MySQLdb
@@ -15,9 +15,10 @@ def find_state_by_name():
                          port=3306)
 
     cur = db.cursor()
-    query = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(argv[4])
+    query = ("SELECT * FROM states WHERE" 
+             "name = '{}' ORDER BY id ASC".format(argv[4]))
     cur.execute(query)
-    
+
     rows = cur.fetchall()
     for row in rows:
         print(row)
