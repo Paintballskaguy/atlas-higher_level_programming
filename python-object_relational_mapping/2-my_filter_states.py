@@ -7,6 +7,7 @@ Script takes in an arugment and displays all state values.
 import MySQLdb
 from sys import argv
 
+
 def find_state_by_name():
     db = MySQLdb.connect(host="localhost",
                          user=argv[1],
