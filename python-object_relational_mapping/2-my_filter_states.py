@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Script takes in an arugment and displays all state values.  
+Script takes in an arugment and displays all state values.
 """
 
 import MySQLdb
