@@ -15,7 +15,9 @@ def find_state_by_name():
                          port=3306)
 
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(argv[4]) cur.execute(query))
+    query = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(argv[4])
+    cur.execute(query))
+    
     rows = cur.fetchall()
     for row in rows:
         print(row)
