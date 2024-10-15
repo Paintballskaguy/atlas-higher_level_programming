@@ -10,7 +10,6 @@ import MySQLdb
 from sys import argv
 
 
-
 def list_states_starting_with_n():
     db = MySQLdb.connect(host="localhost",
                          user=argv[1],
