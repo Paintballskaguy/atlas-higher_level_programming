@@ -1,6 +1,6 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """
-Contains the State Class and an instance base    
+Contains the State Class and an instance base
 """
 
 
