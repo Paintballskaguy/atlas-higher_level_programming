@@ -10,11 +10,20 @@ import sys
 
 Base = declarative_base()
 
+
 class State(Base):
+    """
+    State class:
+    - Links to the MySQL table 'states'
+    - Attributes:
+        - id: auto-generated, unique integer, primary key, can't be null
+        - name: string (maximum 128 characters), can't be null
+    """
     __tablename__ = 'states'
 
     id = Column(Integer, primary_key=True, nullable=False, autoincrement=True)
     name = Column(String(128), nullable=False)
+
 
 if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
