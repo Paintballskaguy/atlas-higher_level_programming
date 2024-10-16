@@ -4,7 +4,7 @@ Contains the State Class and an instance base
 """
 
 
-from SQLAlchemy import Column, Integer, String, create_engine
+from sqlalchemy import Column, Integer, String, create_engine
 from sqlalchemy.ext.declarative import declarative_base
 import sys
 
