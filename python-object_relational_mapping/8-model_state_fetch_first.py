@@ -10,12 +10,9 @@ import sys
 
 
 def fetch_first_state():
-    """
-    Prints the first State object from the database, or 'Nothing' if the table is empty.
-    """
 
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
-        sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
+             sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
 
     Session = sessionmaker(bind=engine)
 
