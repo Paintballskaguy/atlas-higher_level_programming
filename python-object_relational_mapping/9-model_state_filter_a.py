@@ -11,7 +11,8 @@ import sys
 
 def filter_states_with_a():
     """
-    Lists all State objects that contain the letter 'a', sorted by states.id in ascending order.
+    Lists all State objects that contain the letter
+    'a', sorted by states.id in ascending order.
     """
 
     engine = create_engine(
