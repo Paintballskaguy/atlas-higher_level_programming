@@ -2,6 +2,6 @@
 
 let MyVar;
 
-MyVar = 'Javascript is amazing'
+MyVar = 'JavaScript is amazing'
 
 console.log(MyVar);
