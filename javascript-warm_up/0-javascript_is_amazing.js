@@ -1,3 +1,7 @@
 #!/usr/bin/node
 
-console.log("hello world!");
+let MyVar;
+
+MyVar = 'Javascript is amazing!'
+
+console.log(MyVar);
