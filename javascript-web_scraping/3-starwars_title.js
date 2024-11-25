@@ -4,7 +4,7 @@ const request = require('request');
 const movieId = process.argv[2];
 
 if (!movieId) {
-  console.error('Error: Missing movie ID arguement');
+  console.error('Error: Missing movie ID argument');
   process.exit(1);
 }
 
@@ -17,7 +17,7 @@ request(apiUrl, (error, response, body) => {
   }
   if (response.statusCode === 200) {
     const data = JSON.parse(body);
-    console.data(data.title);
+    console.log(data.title);
   } else {
     console.error(`Error: Unable to fetch data. Status code: ${response.statusCode}`);
   }
