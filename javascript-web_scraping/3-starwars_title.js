@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 const request = require('request');
-const movieId = process.argvp[2];
+const movieId = process.argv[2];
 
 if (!movieId) {
   console.error('Error: Missing movie ID arguement');
